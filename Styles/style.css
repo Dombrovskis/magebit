@@ -1,0 +1,43 @@
+body {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 60px;
+  padding: 60px;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.whitebox {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  width: 600px;
+  height: 1000px;
+}
+
+.ananas {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*# sourceMappingURL=style.css.map */

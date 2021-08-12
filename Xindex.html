@@ -1,39 +1,3 @@
-
-<?php
-if(isset($_POST['submit'])){
-    
-    $email = $_POST['regEmail'];
-
-    if(empty($email)){
-        echo '<script>alert("Email is Empty")</script>';
-    }
-
-}
-
-if(isset($_POST['submit'])) {
-$email = $_POST['regEmail'];
-require_once 'db.php';
-
-
-$sql= "INSERT INTO emaildb (email)VALUES('$email')";    
-    if($conn->query($sql) === TRUE){   
-        // $success= '
-        //          <div class="alert alert-success" role="alert">
-        //          Congratulations with successful registration!
-        //           </div>   ';
-    
-            header('refresh:2; index.php');
-    
-    }else {
-        echo 'error' . $sql . $conn->error;
-    }
-}
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +12,8 @@ $sql= "INSERT INTO emaildb (email)VALUES('$email')";
 <body>
     <div class="whitebox">
         <ul class="topnav">
-            <li><a class="active" href="index.php">pinapple.</a></li>
+
+            <li><a class="active" href="#">pinapple.</a></li>
             <li style="float:right"><a href="#">About</a></li>
             <li style="float:right"><a href="#">How it works</a></li>
             <li style="float:right"><a href="#">Contact</a></li>
@@ -59,16 +24,20 @@ $sql= "INSERT INTO emaildb (email)VALUES('$email')";
         <h4>
             Subscribe to our newsletter and get 10% discount on pinapple glasses.
         </h4>
-        <form action="" method="POST">
-            
-                <input name="regEmail" placeholder="Enter your email adress" required>
-                <button type="submit" name="submit">
-                Submit </button>
-                
+
+        <form action="">
+            <div class="input">
+                <div class="xxx"></div>
+                <input type="email" placeholder="Enter your email adress" required>
+                <button type="post"><img src="./img/ic_arrow.svg" alt="Arrow></button>
+            </div>
+            <button type="submit" class="btn btn-primary" name="submit">
+                Submit
+            </button>
             <div class="xxxx">
                 <input type="checkbox" required></input>
                 <p>I agree to <a href="#">terms of service</a></p>
-            </div> 
+            </div>
         </form>
     </div>
 
